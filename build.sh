@@ -8,7 +8,7 @@ if [ "$1" = "-h" ]; then
         directory name is automatically appended. For example:
           localhost/VisualEvent/builds - default if no option is provided
           sprymedia.co.uk/VisualEvent/builds
-      debug - Debug indicator. Will not compress the Javascript
+      debug - Debug indicator. Will not compress the JavaScript
 
     Example deploy build:
       ./build.sh sprymedia.co.uk/VisualEvent/builds
@@ -57,16 +57,16 @@ mkdir -p "$BUILD"
 
 
 # JAVASCRIPT
-echo "  Javascript"
+echo "  JavaScript"
 mkdir "$BUILD_JS"
 
-echo "    Combining Javascript files"
+echo "    Combining JavaScript files"
 cp  "$JS/VisualEvent_Loader.js"                                               "$BUILD_BASE/VisualEvent_Loader.js"
 cat "$JS/jquery.js" "$JS/shCore.js" "$JS/VisualEvent.js" "$JS"/parsers/*.js > "$BUILD_JS/VisualEvent-jQuery.js"
 cat                 "$JS/shCore.js" "$JS/VisualEvent.js" "$JS"/parsers/*.js > "$BUILD_JS/VisualEvent.js"
 
 if [ "$DEBUG" != "debug" -a -e $UGLIFYJS ]; then
-	echo "    Compressing Javascript"
+	echo "    Compressing JavaScript"
 	$UGLIFYJS $BUILD_BASE/VisualEvent_Loader.js > $BUILD_BASE/VisualEvent_Loader.min.js
 	$UGLIFYJS $BUILD_JS/VisualEvent-jQuery.js   > $BUILD_JS/VisualEvent-jQuery.min.js
 	$UGLIFYJS $BUILD_JS/VisualEvent.js          > $BUILD_JS/VisualEvent.min.js

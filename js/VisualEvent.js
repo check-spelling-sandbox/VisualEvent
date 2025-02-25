@@ -1,6 +1,6 @@
 /**
  * @summary     Visual Event
- * @description Visual Event - show Javascript events which have been attached to objects, and
+ * @description Visual Event - show JavaScript events which have been attached to objects, and
  *              the event's associated function code, visually.
  * @file        VisualEvent_Loader.js
  * @author      Allan Jardine (www.sprymedia.co.uk)
@@ -20,8 +20,8 @@
 
 /** 
  * Visual Event will show, visually, which DOM elements on a web-page have events attached to
- * them, information about those events and the code accossiated with each handler for the 
- * event. It does this by parsing through the cache of Javascript libraries (as there is no DOM
+ * them, information about those events and the code associated with each handler for the 
+ * event. It does this by parsing through the cache of JavaScript libraries (as there is no DOM
  * method to get the information required), thus a major part of Visual Event are the library
  * parsers. A result of this is that universal display of events is not possible - there must
  * be a parser available.
@@ -172,11 +172,11 @@ window.VisualEvent = function ()
 			'<div id="Event_Help">'+
 				'<div class="Event_HelpInner">'+
 					'<h1>Visual Event help</h1>'+
-					'<p>Visual Event will show which elements on any given page have Javascript events attached '+
+					'<p>Visual Event will show which elements on any given page have JavaScript events attached '+
 						'to them, what those events are and the code associated with the events. In Webkit '+
 						'browsers and Opera, Visual Event will also indicate where the code in question was '+
 						'defined.</p>'+
-					'<p>Note that Visual Event is only able to show events for Javascript libraries for which '+
+					'<p>Note that Visual Event is only able to show events for JavaScript libraries for which '+
 						'it has a parser. This is currently: DOM0 events, Glow, jQuery, MooTools, Prototype and YUI2.</p>'+
 					'<p>Commands:</p>'+
 					'<table cellpadding="0" cellspacing="0" border="0">'+
@@ -225,7 +225,7 @@ window.VisualEvent = function ()
 					'</table>'+
 					'<p>Visual Event is open source software (GPLv2). If you would like to contribute an '+
 						'enhancement, please fork the project on '+
-						'<a href="https://github.com/DataTables/VisualEvent" target="_blank">Github</a>!</p>'+
+						'<a href="https://github.com/DataTables/VisualEvent" target="_blank">GitHub</a>!</p>'+
 					'<p class="Event_HelpClose">Click anywhere to close this help box.</p>'+
 				'</div>'+
 			'</div>')[0],
@@ -360,7 +360,7 @@ VisualEvent.prototype = {
 
 		this._renderLabel();
 
-		/* Load the text of all the Javascript on the page so we can try to find source */
+		/* Load the text of all the JavaScript on the page so we can try to find source */
 		this._scriptsLoad();
 	},
 
@@ -379,7 +379,7 @@ VisualEvent.prototype = {
 
 
 	/**
-	 * Hide hte help box
+	 * Hide the help box
 	 *  @private
 	 */
 	"_hideHelp": function () {
@@ -389,11 +389,11 @@ VisualEvent.prototype = {
 
 
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-	 * Javascript source handling
+	 * JavaScript source handling
 	 */
 
 	/**
-	 * Parse the DOM for script tags and store the Javascript that is found. For any scripts which
+	 * Parse the DOM for script tags and store the JavaScript that is found. For any scripts which
 	 * have a 'src' attribute, add them to a queue for Ajax loading and then start the queue running
 	 *  @private
 	 */
@@ -511,7 +511,7 @@ VisualEvent.prototype = {
 
 
 	/**
-	 * Get the name of a file from a URL (i.e. the last part in a slash seperated string)
+	 * Get the name of a file from a URL (i.e. the last part in a slash separated string)
 	 *  @param {string} src URL to get the file name from
 	 *  @returns {string} File name
 	 *  @private
@@ -553,7 +553,7 @@ VisualEvent.prototype = {
 
 		/* Add the API array information - if it is available */
 		if ( typeof VisualEvents == 'object' ) {
-			if ( this._ceckIntegrity( VisualEvents ) ) {
+			if ( this._checkIntegrity( VisualEvents ) ) {
 				elements = this._combineEvents( elements, VisualEvents );
 			}
 		}
@@ -1161,7 +1161,7 @@ VisualEvent.prototype = {
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 /**
- * Javascript library parsers which will find information about the nodes and events which are
+ * JavaScript library parsers which will find information about the nodes and events which are
  * used in the page. This is an array of functions which must return an array of objects with
  * the following parameters
  *   {element} node The DOM element in question
