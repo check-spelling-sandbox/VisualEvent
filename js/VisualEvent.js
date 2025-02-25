@@ -379,7 +379,7 @@ VisualEvent.prototype = {
 
 
 	/**
-	 * Hide hte help box
+	 * Hide the help box
 	 *  @private
 	 */
 	"_hideHelp": function () {
