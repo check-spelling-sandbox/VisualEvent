@@ -553,7 +553,7 @@ VisualEvent.prototype = {
 
 		/* Add the API array information - if it is available */
 		if ( typeof VisualEvents == 'object' ) {
-			if ( this._ceckIntegrity( VisualEvents ) ) {
+			if ( this._checkIntegrity( VisualEvents ) ) {
 				elements = this._combineEvents( elements, VisualEvents );
 			}
 		}
