@@ -1,6 +1,6 @@
 /**
  * @summary     VisualEvent_Loader
- * @description Loader for VisualEvent - injects the required CSS and Javascript into a page
+ * @description Loader for VisualEvent - injects the required CSS and JavaScript into a page
  * @file        VisualEvent_Loader.js
  * @author      Allan Jardine (www.sprymedia.co.uk)
  * @license     GPL v2
@@ -19,7 +19,7 @@
 if ( typeof VisualEvent_Loader == 'undefined' ) {
 
 /** 
- * VisualEvent_Loader is a class which will provide pre-loading of Javascript and CSS files
+ * VisualEvent_Loader is a class which will provide pre-loading of JavaScript and CSS files
  * for VisualEvent based on the environment the script is running in (for example if jQuery is
  * already available or not).
  * 
@@ -136,7 +136,7 @@ VisualEvent_Loader.prototype = {
 
 	/**
 	 * Load a new file into the DOM, and have it processed based on its type. This can be a
-	 * Javascript file, a CSS file or an image
+	 * JavaScript file, a CSS file or an image
 	 *  @param {string} file URL to the file to load
 	 *  @param {string} type The file type. Can be "css", "js" or "image"
 	 *  @returns {undefined}

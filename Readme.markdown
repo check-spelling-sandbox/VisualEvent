@@ -1,6 +1,6 @@
-# Visual Event - visually inspect Javascript events
+# Visual Event - visually inspect JavaScript events
 
-Visual Event is a Javascript bookmarklet which provides debugging information about events that have been attached to DOM elements. Visual Event shows:
+Visual Event is a JavaScript bookmarklet which provides debugging information about events that have been attached to DOM elements. Visual Event shows:
 
 * Which elements have events attached to them
 * The type of events attached to an element
@@ -15,7 +15,7 @@ In addition to being useful for debugging your own code, Visual Event can be use
 As Visual Event is a bookmarklet, installing and running it on any web-page is extremely simple:
 
 * Open the [Visual Event bookmarklet page](http://sprymedia.co.uk/VisualEvent) and drag the "Visual Event" link to your bookmark bar
-* Load a web-page which uses one of the supported Javascript libraries
+* Load a web-page which uses one of the supported JavaScript libraries
 * Click "Visual Event" in your bookmark bar
 * View the event handlers which are attached to the document elements.
 
@@ -24,9 +24,9 @@ A demo of Visual Event that is automatically loaded is [available](http://spryme
 
 ## How it works
 
-It turns out that there is no standard method provided by the W3C recommended DOM interface to find out what event listeners are attached to a particular element. While this may appear to be an oversight, there was a proposal to include a property called [eventListenerList](http://www.w3.org/TR/2002/WD-DOM-Level-3-Events-20020208/changes.html) to the level 3 DOM specification, but was unfortunately been removed in later drafts. As such we are forced to looked at the individual Javascript libraries, which typically maintain a cache of attached events (so they can later be removed and perform other useful abstractions).
+It turns out that there is no standard method provided by the W3C recommended DOM interface to find out what event listeners are attached to a particular element. While this may appear to be an oversight, there was a proposal to include a property called [eventListenerList](http://www.w3.org/TR/2002/WD-DOM-Level-3-Events-20020208/changes.html) to the level 3 DOM specification, but was unfortunately been removed in later drafts. As such we are forced to looked at the individual JavaScript libraries, which typically maintain a cache of attached events (so they can later be removed and perform other useful abstractions).
 
-As such, in order for Visual Event to show events, it must be able to parse the event information out of a Javascript library. Currently the following libraries are supported by Visual Event:
+As such, in order for Visual Event to show events, it must be able to parse the event information out of a JavaScript library. Currently the following libraries are supported by Visual Event:
 
 * DOM 0 events
 * jQuery 1.2+
@@ -40,9 +40,9 @@ As such, in order for Visual Event to show events, it must be able to parse the 
 
 Any help with improvements and suggestions for Visual Event are very welcome indeed! If you hit a specific problem, then please open an issue on GitHub for the problem you are encountering, including a link to the page where the problem occurs. Forks and pull requests are also very much encouraged!
 
-One area which may be of interest to you is how to add support for additional Javascript libraries. The key thing that is needed is access to the event cache that the library uses, since without that it is impossible to determine what nodes have events and the attached code.
+One area which may be of interest to you is how to add support for additional JavaScript libraries. The key thing that is needed is access to the event cache that the library uses, since without that it is impossible to determine what nodes have events and the attached code.
 
-The VisualEvent class has a static array called `VisualEvent.parsers` which is an array of functions - to add a new parser, just push your function onto this array. The function must return a Javascript array of objects with the following parameters:
+The VisualEvent class has a static array called `VisualEvent.parsers` which is an array of functions - to add a new parser, just push your function onto this array. The function must return a JavaScript array of objects with the following parameters:
 
 ```javascript
 [
@@ -64,7 +64,7 @@ The VisualEvent class has a static array called `VisualEvent.parsers` which is a
 
 ## Building Visual Event
 
-In order to run a local copy of Visual Event you must build it, since this process does file concatenation, which brings in the library parsers to the main file. The build process will also build the JSDoc documentation and compress the Javascript files (unless made with debug).
+In order to run a local copy of Visual Event you must build it, since this process does file concatenation, which brings in the library parsers to the main file. The build process will also build the JSDoc documentation and compress the JavaScript files (unless made with debug).
 
 To build Visual Event, all you need is a system which will run bash scripts and enter the command `./build.sh debug` in your terminal. This will create a new directory in the "builds" directory with the correct loader and the build Visual Event directory (note the timestamp is used to help prevent caching issues for the bookmarklet, both during development and when deployed). The following is the usage for the build script:
 
@@ -76,7 +76,7 @@ Visual Event build script - usage:
       automatically prepended. For example:
         localhost/VisualEvent/builds - default if no option is provided
         sprymedia.co.uk/VisualEvent/builds
-    debug - Debug indicator. Will not compress the Javascript
+    debug - Debug indicator. Will not compress the JavaScript
 
   Example deploy build:
     ./build.sh sprymedia.co.uk/VisualEvent/builds
