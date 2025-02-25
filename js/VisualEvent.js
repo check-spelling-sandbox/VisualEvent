@@ -511,7 +511,7 @@ VisualEvent.prototype = {
 
 
 	/**
-	 * Get the name of a file from a URL (i.e. the last part in a slash seperated string)
+	 * Get the name of a file from a URL (i.e. the last part in a slash separated string)
 	 *  @param {string} src URL to get the file name from
 	 *  @returns {string} File name
 	 *  @private
