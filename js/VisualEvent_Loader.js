@@ -70,7 +70,7 @@ window.VisualEvent_Loader = function ()
 
 VisualEvent_Loader.prototype = {
 	/**
-	 * Constrctor - show a loading element to the end user and then load up the various files
+	 * Constructor - show a loading element to the end user and then load up the various files
 	 * that are needed
 	 *  @returns {undefined}
 	 *  @private
